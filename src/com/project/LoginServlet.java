@@ -1,16 +1,15 @@
 package com.project;
 
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import com.project.bean.Authenticate;
 
 @WebServlet("/LoginServlet")
 public class LoginServlet extends HttpServlet {
@@ -23,59 +22,18 @@ public class LoginServlet extends HttpServlet {
 		Username=request.getParameter("username");
 		Password=request.getParameter("password");
 		role=request.getParameter("role");
-		if(role=="Employee")
-		{
-			try{
-			
-					Class.forName("oracle.jdbc.driver.OracleDriver");
-					Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","hr","geetika157");
-					Statement st = con.createStatement();
-					ResultSet rs = st.executeQuery("select * from Employee ");
-					while(rs!=null && rs.next())
-					{
-						String id=rs.getString("username");
-						String paswd=rs.getString("password");
-						if(Username.equals(id))
-						{
-							if(paswd.equals(Password))
-							{
-								System.out.println("hello"+Username+"<br>"+"whats the order");
-							}
-							
-						}
-					}
-			} catch(Exception e) {
-				System.out.println(e.getMessage());
-			}
-		}
-		else
-		{
-			try{
-				
-				Class.forName("oracle.jdbc.driver.OracleDriver");
-				Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","hr","geetika157");
-				Statement st = con.createStatement();
-				ResultSet rs = st.executeQuery("select * from Customer ");
-				while(rs!=null && rs.next())
-				{
-					String id=rs.getString("username");
-					String paswd=rs.getString("password");
-					if(Username.equals(id))
-					{
-						if(paswd.equals(Password))
-						{
-							System.out.println("hello"+Username+"<br>"+"Avail our exciting surprises on your membership card");
-						}
-						
-					}
-				}	
-			} catch(Exception e) {
-				System.out.println(e.getMessage());
-			}
-			
-		}
 		
+		Authenticate loginservice=new Authenticate();
+		boolean result=loginservice.authenticate(Username, Password,role);
+		if(result){
+			RequestDispatcher dispatcher=request.getRequestDispatcher("success.jsp");
+			dispatcher.forward(request, response);
+		}
+		else{
+			System.out.print(result);
+			response.sendRedirect("login.jsp");
+			
+		}
+   }
+}	
 	
-	}
-
-}

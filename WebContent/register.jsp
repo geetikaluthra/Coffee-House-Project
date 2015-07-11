@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+    pageEncoding="ISO-8859-1" import="java.text.SimpleDateFormat" import="java.util.Date" import="java.text.ParseException"
+    %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -17,7 +18,7 @@
 </tr>
 <tr>
 <td>Mobile</td>
-<td><input type="text" name="emailid" placeholder="Email-id"></td>
+<td><input type="text" name="mobile" placeholder="Contact No. for your offers"></td>
 </tr>
 <tr>
 <tr>
@@ -28,6 +29,24 @@
 <td>Date of Birth</td>
 <td><input type="date" name="bday" ></td>
 </tr>
+<%
+String expectedPattern = "MM/dd/yyyy";
+SimpleDateFormat formatter = new SimpleDateFormat(expectedPattern);
+try
+{
+  // (2) give the formatter a String that matches the SimpleDateFormat pattern
+  String userInput = "bday";
+  Date date = formatter.parse(userInput);
+  System.out.println("date is in correct format");
+
+}
+catch (ParseException e)
+{
+  e.printStackTrace();
+}
+
+%>
+<tr>
 <td>Gender</td>
 <td><input type="radio" name="gender" >Male</td>
 <td><input type="radio" name="gender" >Female</td>
@@ -35,7 +54,7 @@
 <tr>
 <td>You are </td>
 <td>
-<select>
+<select name="role">
   <option value="employee">Employee</option>
   <option value="customer">Customer</option>
  </select>
@@ -44,11 +63,6 @@
 <tr>
 <td><input type="submit" value="Register" ></td>
 </tr>
-
-
-
-
-
 </table>
 </form>
 </body>
