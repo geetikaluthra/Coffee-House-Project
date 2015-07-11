@@ -7,33 +7,34 @@
 <title>login page</title>
 </head>
 <body>
-<center><b><h1>Sign In</h1></b></center>
-<form action="/Loginapp/loginServlet"  method ="post">
-<table>
-<tr><td>UserId/EmployeeId</td>
-<td><input type="text" name="username" ></td>
-</tr>
-<br>
-<tr>
-<td>Password </td>
-<td><input type="password" name="password"></td>
-</tr>
-<br>
-<tr>
-<td>You are </td>
-<td>
-<select name="role">
-  <option value="employee">Employee</option>
-  <option value="customer">Customer</option>
- </select>
- </td>
- </tr>
-<tr>
-<td><input type="submit" value="login"></td>
-</tr>
-<tr>
-<td><a href="/Java_Project/Forgotpassword.jsp">Forgot password</a>
-</table>
-</form>
+<a href="/CoffeeHouse/index.html ">Home</a>
+<b><h2>Sign In</h2></b>
+<fieldset>
+	<form action="/CoffeeHouse/LoginServlet"  method ="post">
+		<table>
+			<tr><td>UserId/EmployeeId</td>
+			<td><input type="text" name="username" ></td>
+			</tr>
+			<tr>
+				<td>Password </td>
+				<td><input type="password" name="password"></td>
+			</tr>
+			<tr>
+				<td>You are </td>
+				<td>
+				<select name="role">
+  					<option value="employee">Employee</option>
+  					<option value="customer">Customer</option>
+ 				</select>
+ 				</td>
+ 			</tr>
+			<tr>
+			<td><input type="submit" value="login"></td>
+			</tr>
+			<tr>
+			<td><a href="/CoffeeHouse/Forgotpassword.jsp">Forgot password</a>
+		</table>
+	</form>
+</fieldset>
 </body>
 </html>

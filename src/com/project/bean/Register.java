@@ -60,7 +60,7 @@ public class Register {
 		return userid_exist;
 	}
 	
-	public boolean register_user(String username,String password,String role,String mobile,String gender,Date dob)
+	public boolean register_user(String username,String password,String role,String mobile,String gender,String dob)
 	{
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
