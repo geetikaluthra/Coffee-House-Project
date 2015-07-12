@@ -4856,10 +4856,11 @@ a.badge:focus {
   margin-left: 3px;
 }
 .jumbotron {
-  padding: 30px 15px;
+  padding: 30px 10px;
   margin-bottom: 30px;
   color: inherit;
-  background-color: #eee;
+  background-color:cornsilk;
+  border-spacing: inherit;
 }
 .jumbotron h1,
 .jumbotron .h1 {
@@ -5339,10 +5340,11 @@ a.list-group-item-danger.active:focus {
 }
 .panel-footer {
   padding: 10px 15px;
-  background-color: #f5f5f5;
-  border-top: 1px solid #ddd;
+  background-color:cornsilk;
+  border-top: 1px solid #dda;
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px;
+  box-shadow: 50px;
 }
 .panel > .list-group,
 .panel > .panel-collapse > .list-group {
