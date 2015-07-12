@@ -26,8 +26,14 @@ public class LoginServlet extends HttpServlet {
 		Authenticate loginservice=new Authenticate();
 		boolean result=loginservice.authenticate(Username, Password,role);
 		if(result){
-			RequestDispatcher dispatcher=request.getRequestDispatcher("success.jsp");
+			if(role.equalsIgnoreCase("Employee")){
+				RequestDispatcher dispatcher=request.getRequestDispatcher("success.jsp");
+				dispatcher.forward(request, response);
+			}
+			else{
+			RequestDispatcher dispatcher=request.getRequestDispatcher("afterloginuser.jsp");
 			dispatcher.forward(request, response);
+			}
 		}
 		else{
 			System.out.print(result);
