@@ -1,9 +1,0 @@
-
-.background {
-    background-size: cover;
-    background-image:url(/WebContent/images/coffee-bg.jpg);
-}
-
-.blend {
-    background-blend-mode: difference;
-}
