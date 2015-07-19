@@ -1,6 +1,6 @@
 <<<<<<< HEAD
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"  import="javax.servlet.RequestDispatcher" %>
+    pageEncoding="ISO-8859-1"   %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -9,12 +9,18 @@
 </head>
 <body>
 <h3>Login successful</h3>
+<a href="order.jsp">Place a order</a>
+<a href="logout.jsp">logout</a><br>
 
-<% 
-RequestDispatcher  rd = request.getRequestDispatcher("");
-rd.forward(request, response);
+hello <%=session.getAttribute("username")%>!!!
+<%
+session.setMaxInactiveInterval(5);
 %>
-hello <%=request.getParameter("username") %>!!!
+
+
+
+
+
 
 
 

@@ -20,19 +20,18 @@ public class Authenticate {
 		}
 		else
 		{		
-		  if(role=="Employee")
+		  if(role.equalsIgnoreCase("Employee"))
 		  {
 			try{
-			
 					Class.forName("oracle.jdbc.driver.OracleDriver");
-					Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","hr","geetika157");
+					Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","coffeehouse","12345");
 					Statement st = con.createStatement();
-					ResultSet rs = st.executeQuery("select * from Employee ");
+					ResultSet rs = st.executeQuery("select * from entries ");
 					while(rs!=null && rs.next())
 					{
 						String id=rs.getString("username");
 						String paswd=rs.getString("password");
-						if(username.equals(id))
+						if(username.equalsIgnoreCase(id))
 						{
 							if(paswd.equals(password))
 							{
@@ -42,6 +41,7 @@ public class Authenticate {
 							
 						}
 					}
+				
 			} catch(Exception e) {
 				System.out.println(e.getMessage());
 			}
@@ -51,14 +51,14 @@ public class Authenticate {
 			try{
 				
 				Class.forName("oracle.jdbc.driver.OracleDriver");
-				Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","hr","geetika157");
+				Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","coffeehouse","12345");
 				Statement st = con.createStatement();
-				ResultSet rs = st.executeQuery("select * from Customer ");
+				ResultSet rs = st.executeQuery("select * from entries");
 				while(rs!=null && rs.next())
 				{
 					String id=rs.getString("username");
 					String paswd=rs.getString("password");
-					if(username.equals(id))
+					if(username.equalsIgnoreCase(id))
 					{
 						if(paswd.equals(password))
 						{
@@ -67,7 +67,8 @@ public class Authenticate {
 						}
 						
 					}
-				}	
+				}
+			
 			} catch(Exception e) {
 				System.out.println(e.getMessage());
 			}

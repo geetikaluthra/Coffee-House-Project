@@ -9,14 +9,14 @@
 </head>
 <body>
 <h3>Login successful</h3>
-
-<% 
-RequestDispatcher  rd = request.getRequestDispatcher("");
-rd.forward(request, response);
+<br>
+<a href="recharge.jsp">Recharge your card</a>
+<a href="logout.jsp">logout</a>
+<br>
+hello <%=session.getAttribute("username")%>!!!
+<%
+session.setMaxInactiveInterval(5);
 %>
-hello <%=request.getParameter("username") %>!!!
-
-
 </body>
 =======
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"

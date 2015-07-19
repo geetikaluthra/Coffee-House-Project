@@ -43,8 +43,8 @@
 %>
 			<tr>
 				<td>Gender</td>
-				<td><input type="radio" name="gender" >Male</td>
-				<td><input type="radio" name="gender" >Female</td>
+				<td><input type="radio" name="gender" value="male">Male</td>
+				<td><input type="radio" name="gender" value="female">Female</td>
 			</tr>
 			<tr>
 				<td>You are </td>
