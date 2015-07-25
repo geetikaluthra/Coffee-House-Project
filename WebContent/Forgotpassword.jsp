@@ -44,15 +44,7 @@
 <br>
 
 <div class="container">
-<footer>
-	<div class="row">
-        <div class="col-md-3">
-        <h3>Developed with <span class="glyphicon glyphicon-heart"></span> by:</h3>
-        </div>
-        <div class="col-md-5"><img src="images/BrainyPeopleLogo.png" alt="Developer Logo" class="img-responsive" style="height:150px; width:450px;">
-        </div>
-    </div>
-    <br>    
+<footer>  
     <div class="row">
     <div class="panel-footer"><center><blockquote class="blockquote">
     <p>Designed on Bootstrap and Coded on JSP.</p>
