@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html"; 
-		pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -51,7 +51,6 @@
 				<th scope="row">1</th>
 				<td><label><div class="checkbox"><input type="checkbox" name="order" value="masalatea">Masala tea </div></label></td>
 				<td><div><select class="form-control" name="quantity">
-					<option value="0">0</option>
 					<option value="1">1</option>
 					<option value="2">2</option>
 					<option value="3">3</option>
@@ -69,7 +68,6 @@
 				<th scope="row">2</th>
 				<td><label><div class="checkbox"><input type="checkbox" name="order" value="devilsown">Devil's Own </div></label></td>
 				<td><div class="select"><select class="form-control" name="quantity1">
-					<option value="0">0</option>
 					<option value="1">1</option>
 					<option value="2">2</option>
 					<option value="3">3</option>
@@ -87,7 +85,6 @@
 				<th scope="row">3</th>
 				<td><label><div class="checkbox"><input type="checkbox" name="order" value="Cappuccino">Cappuccino </div></label></td>
 				<td><div class="select"><select class="form-control" name="quantity2">
-					<option value="0">0</option>
 					<option value="1">1</option>
 					<option value="2">2</option>
 					<option value="3">3</option>
@@ -105,7 +102,6 @@
 				<th scope="row">4</th>
 				<td><label><div class="checkbox"><input type="checkbox" name="order" value="paneersandwich">Paneer sandwich </div></label></td>
 				<td><div class="select"><select class="form-control" name="quantity3">
-					<option value="0">0</option>
 					<option value="1">1</option>
 					<option value="2">2</option>
 					<option value="3">3</option>
@@ -123,7 +119,6 @@
 				<th scope="row">5</th>
 				<td><label><div class="checkbox"><input type="checkbox" name="order" value="chickensandwich">Chicken sandwich </div></label></td>
 				<td><div class="select"><select class="form-control" name="quantity4">
-					<option value="0">0</option>
 					<option value="1">1</option>
 					<option value="2">2</option>
 					<option value="3">3</option>
@@ -139,10 +134,7 @@
  			</tr>		
 			</tbody>
 		</table>
-		<div class="pull-right">
-			<input class="btn btn-primary" type="submit" value="Place Order" >
-	</div>
-	</form>
+	
 	<!-- For Navigation of menu -->
 	<nav>
 		<ul class="pager">
@@ -151,7 +143,10 @@
 		</ul>
 	</nav>
 	</div>
-	
+	<div class="pull-right">
+			<input class="btn btn-primary" type="submit" value="Place Order" >
+	</div>
+	</form>
 </div>
 </div>
 <div class="container">
