@@ -29,6 +29,10 @@ public class OrderServlet extends HttpServlet {
 		String Quantity4=request.getParameter("quantity4");
 		
 		String QuantityItems[]={Quantity0,Quantity1,Quantity2,Quantity3,Quantity4};
+		for(int i=0;i<OrderItems.length;i++)
+		{
+			System.out.println(QuantityItems[i]+"<br>");	
+		}
 		HttpSession session = request.getSession();
 		session.setAttribute( "myArray", OrderItems );
 		session.setAttribute("myArray1",QuantityItems);
