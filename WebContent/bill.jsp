@@ -3,15 +3,42 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Bill Generation</title>
+	<meta http-equiv="Content-Type" content="text/html">
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Bill Generation | Coffee House</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
+    <link rel="scripts" type="js" href="js/bootstrap.min.js" />
+    <link rel="scripts" type="js" href="js/jQuery-2.1.3.min.js" />
 </head>
 <body>
-<a type="button" class="btn btn-warning" href="/CoffeeHouse/order.jsp">Next Order</a>
+	<header>
+	<nav class="navbar navbar-inverse navbar-static-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle Navigation</span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="/CoffeeHouse/index.html" class="navbar navbar-brand"><h4>Coffee House</h4></a>
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="order.jsp"><h5>Next Order</h5></a></li>
+					<li><a href="logout.jsp"><h5>Logout</h5></a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+</header>
+<div class="container">
+<div class="panel">
 <h2>SM Coffee House </h2>
 <h4>BILL</h4>
 Your order:		
-<table>
+<table class="table">
 <tr>
 <td>Items  </td>
 <td>Quantity</td>
@@ -60,6 +87,9 @@ for(int i=0;i<array.length;i++)
  
 Your Total amount due is:
 <%=session.getAttribute("Amount")%>!!!
+
+</div>
+</div>
 
 </body>
 </html>
