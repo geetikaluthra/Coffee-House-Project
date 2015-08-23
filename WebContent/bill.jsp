@@ -57,8 +57,16 @@ for(int i=0;i<array.length;i++)
 String[] array1 = (String[])session.getAttribute( "myArray1" );
 for(int i=0;i<array.length;i++)
 {
-	out.println(array1[i]+"<br>");
-
+	if(array[i].equalsIgnoreCase("masalatea"))
+		out.println(array1[i]+"<br>");
+	if(array[i].equalsIgnoreCase("devilsown"))
+		out.println(array1[i]+"<br>");
+	if(array[i].equalsIgnoreCase("Cappuccino"))
+		out.println(array1[i]+"<br>");
+	if(array[i].equalsIgnoreCase("paneersandwich"))
+		out.println(array1[i]+"<br>");
+	if(array[i].equalsIgnoreCase("chickensandwich"))
+		out.println(array1[i]+"<br>");
 }
 %></td>
 <td><%
@@ -70,7 +78,7 @@ for(int i=0;i<array.length;i++)
 	String quantity3=array1[3];
 	String quantity4=array1[4];
 	if(array[i].equalsIgnoreCase("masalatea"))
-		out.println(Integer.parseInt(quantity)*130+"<br>");
+		out.println(Integer.parseInt(quantity)*50+"<br>");
 	if(array[i].equalsIgnoreCase("devilsown"))
 		out.println(Integer.parseInt(quantity1)*130+"<br>");
 	if(array[i].equalsIgnoreCase("Cappuccino"))
