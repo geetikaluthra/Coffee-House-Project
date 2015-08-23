@@ -4,16 +4,15 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Recharge your mmbership card</title>
+<title>Recharge your membership card</title>
 </head>
 <body>
 <%request.getSession().invalidate(); %>
-<h4>Recharge your mmbership card</h4><br>
+<h4>Recharge your membership card</h4><br>
 <a href="">Credit card</a><br>
 <a href="">Debit card</a><br>
 <a href="">Net Banking</a><br>
 <a href="">Google Wallet</a>
-
 
 </body>
 </html>

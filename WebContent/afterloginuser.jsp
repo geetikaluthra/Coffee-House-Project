@@ -26,6 +26,7 @@
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-right">
+					<li><a href="profile.jsp"><h5>Profile</h5></a></li>
 					<li><a href="recharge.jsp"><h5>Recharge your card</h5></a></li>
 					<li><a href="logout.jsp"><h5>Logout</h5></a></li>
 				</ul>
