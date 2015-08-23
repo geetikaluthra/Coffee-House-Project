@@ -49,7 +49,7 @@
 			<tbody>
 			<tr>
 				<th scope="row">1</th>
-				<td><label><div class="checkbox"><input type="checkbox" name="order" value="masalatea">Masala tea </div></label></td>
+				<td><label><div class="checkbox"><input type="checkbox" name="order" value="Masala Tea">Masala Tea </div></label></td>
 				<td><div><select class="form-control" name="quantity">
 					<option value="0">0</option>
 					<option value="1">1</option>
@@ -67,7 +67,7 @@
 			</tr>
 			<tr>
 				<th scope="row">2</th>
-				<td><label><div class="checkbox"><input type="checkbox" name="order" value="devilsown">Devil's Own </div></label></td>
+				<td><label><div class="checkbox"><input type="checkbox" name="order" value="Devils Own">Devil's Own </div></label></td>
 				<td><div class="select"><select class="form-control" name="quantity1">
 					<option value="0">0</option>
 					<option value="1">1</option>
@@ -103,7 +103,7 @@
 			</tr>	
 			<tr>
 				<th scope="row">4</th>
-				<td><label><div class="checkbox"><input type="checkbox" name="order" value="paneersandwich">Paneer sandwich </div></label></td>
+				<td><label><div class="checkbox"><input type="checkbox" name="order" value="Paneer Sandwich">Paneer sandwich </div></label></td>
 				<td><div class="select"><select class="form-control" name="quantity3">
 					<option value="0">0</option>
 					<option value="1">1</option>
@@ -121,7 +121,7 @@
 			</tr>		
 			<tr>
 				<th scope="row">5</th>
-				<td><label><div class="checkbox"><input type="checkbox" name="order" value="chickensandwich">Chicken sandwich </div></label></td>
+				<td><label><div class="checkbox"><input type="checkbox" name="order" value="Chicken Sandwich">Chicken sandwich </div></label></td>
 				<td><div class="select"><select class="form-control" name="quantity4">
 					<option value="0">0</option>
 					<option value="1">1</option>

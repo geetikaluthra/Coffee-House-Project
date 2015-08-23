@@ -40,7 +40,7 @@ public class OrderServlet extends HttpServlet {
 		
 		for(int i=0;i<OrderItems.length;i++)
 		{
-			if(OrderItems[i].equalsIgnoreCase("masalatea"))
+			if(OrderItems[i].equalsIgnoreCase("Masala Tea"))
 			{
 				Integer Rate=50;
 				Integer Quantity=(Integer) Integer.parseInt(request.getParameter("quantity"));
@@ -49,7 +49,7 @@ public class OrderServlet extends HttpServlet {
 				request.getSession().setAttribute("Amount", amount);
 				
 			}
-			else if(OrderItems[i].equalsIgnoreCase("devilsown"))
+			else if(OrderItems[i].equalsIgnoreCase("Devils Own"))
 			{
 				Integer Rate=130;
 				Integer Quantity=(Integer) Integer.parseInt(request.getParameter("quantity1"));
@@ -65,7 +65,7 @@ public class OrderServlet extends HttpServlet {
 				request.getSession().setAttribute("Amount", amount);
 				
 			}
-			else if(OrderItems[i].equalsIgnoreCase("paneersandwich"))
+			else if(OrderItems[i].equalsIgnoreCase("Paneer Sandwich"))
 			{
 				Integer Rate=120;
 				Integer Quantity=(Integer) Integer.parseInt(request.getParameter("quantity3"));

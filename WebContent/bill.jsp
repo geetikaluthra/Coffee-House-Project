@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1" %>
+    pageEncoding="ISO-8859-1" import="java.util.HashMap"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -45,32 +45,47 @@ Your order:
 <td>Amount</td>
 </tr>
 <tr>
+<tr>
 <td><%
-String[] array = (String[])session.getAttribute( "myArray" );
-for(int i=0;i<array.length;i++)
+String[] Order = (String[])session.getAttribute( "myArray" );
+for(int i=0;i<Order.length;i++)
 {
-	out.println(array[i]+"<br>");	
+	out.println(Order[i]+"<br>");	
 }
 %></td>
 <td>
 <%
-String[] array1 = (String[])session.getAttribute( "myArray1" );
-for(int i=0;i<array.length;i++)
+String[] O = (String[])session.getAttribute( "myArray" );
+HashMap<String,String>  myhashmap=new HashMap<String,String>();
+String[] quantities = (String[])session.getAttribute( "myArray1" );
+for(int i=0;i<quantities.length;i++)
 {
-	if(array[i].equalsIgnoreCase("masalatea"))
-		out.println(array1[i]+"<br>");
-	if(array[i].equalsIgnoreCase("devilsown"))
-		out.println(array1[i]+"<br>");
-	if(array[i].equalsIgnoreCase("Cappuccino"))
-		out.println(array1[i]+"<br>");
-	if(array[i].equalsIgnoreCase("paneersandwich"))
-		out.println(array1[i]+"<br>");
-	if(array[i].equalsIgnoreCase("chickensandwich"))
-		out.println(array1[i]+"<br>");
-	//qt
+	String q=quantities[0];
+	String q1=quantities[1];
+	String q2=quantities[2];
+	String q3=quantities[3];
+	String q4=quantities[4];
+
+myhashmap.put("Masala Tea", q);
+myhashmap.put("Devils Own", q1);
+myhashmap.put("Cappuccino", q2);
+myhashmap.put("Paneer Sandwich", q3);
+myhashmap.put("Chicken Sandwich", q4);
+}
+for(int i=0;i<O.length;i++)
+{
+	String ord=O[i];
+	
+	if(myhashmap.containsKey(ord))
+	{
+		out.println(myhashmap.get(ord));
+		out.println("<br>");
+	}
 }
 %></td>
 <td><%
+String[] array = (String[])session.getAttribute( "myArray" );
+String[] array1 = (String[])session.getAttribute( "myArray1" );
 for(int i=0;i<array.length;i++)
 {
 	String quantity=array1[0];
@@ -78,15 +93,15 @@ for(int i=0;i<array.length;i++)
 	String quantity2=array1[2];
 	String quantity3=array1[3];
 	String quantity4=array1[4];
-	if(array[i].equalsIgnoreCase("masalatea"))
+	if(array[i].equalsIgnoreCase("Masala Tea"))
 		out.println(Integer.parseInt(quantity)*50+"<br>");
-	if(array[i].equalsIgnoreCase("devilsown"))
+	if(array[i].equalsIgnoreCase("Devils Own"))
 		out.println(Integer.parseInt(quantity1)*130+"<br>");
 	if(array[i].equalsIgnoreCase("Cappuccino"))
 		out.println(Integer.parseInt(quantity2)*70+"<br>");
-	if(array[i].equalsIgnoreCase("paneersandwich"))
+	if(array[i].equalsIgnoreCase("Paneer Sandwich"))
 		out.println(Integer.parseInt(quantity3)*120+"<br>");
-	if(array[i].equalsIgnoreCase("chickensandwich"))
+	if(array[i].equalsIgnoreCase("Chicken Sandwich"))
 		out.println(Integer.parseInt(quantity4)*145+"<br>");
 }
  %></td>
