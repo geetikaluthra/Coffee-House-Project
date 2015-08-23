@@ -67,6 +67,7 @@ for(int i=0;i<array.length;i++)
 		out.println(array1[i]+"<br>");
 	if(array[i].equalsIgnoreCase("chickensandwich"))
 		out.println(array1[i]+"<br>");
+	//qt
 }
 %></td>
 <td><%
