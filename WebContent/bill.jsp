@@ -58,7 +58,7 @@ String[] array1 = (String[])session.getAttribute( "myArray1" );
 for(int i=0;i<array.length;i++)
 {
 	out.println(array1[i]+"<br>");
-	;
+
 }
 %></td>
 <td><%
